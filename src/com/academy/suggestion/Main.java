@@ -3,6 +3,8 @@ import java.util.Scanner;
 import static com.academy.suggestion.Message.*;
 public class Main {
 	
+	
+	
 	private static Scanner scan = new Scanner(System.in);
 	private static Database database = new Database();
 	private static int INPUT = -1;
