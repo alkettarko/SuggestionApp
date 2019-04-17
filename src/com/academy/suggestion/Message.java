@@ -36,8 +36,21 @@ public class Message {
 	public static void printClientHomePage() {
 		System.out.println("*** Client HomePage ***");
 		System.out.println("1 - View Profile");
-		System.out.println();
+		System.out.println("2 - View Categories");
+		System.out.println("0 - Log Out");
 	}
+	
+	public static void printAdminHomePage() {
+		System.out.println("*** Admin HomePage ***");
+		System.out.println("1 - Create Category");
+		System.out.println("2 - Create SubCategory");
+		System.out.println("3 - Add Materials");
+		System.out.println("4 - Manage Requests");
+	}
+	
+
+	
+	
 	
 
 }

@@ -26,10 +26,7 @@ public class Suggestion {
 		this.client = client;
 	}
 
-	public void setName(String string) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 	
 	
 	
