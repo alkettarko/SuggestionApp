@@ -109,6 +109,16 @@ public class Main {
 		}
 	}
 
+	public static void suggestCategory(Client loggedClient) {
+		System.out.println("Enter Category Name: ");
+		String categoryName = scan.next();
+		Category category = new Category(categoryName);
+
+		Suggestion suggestion = new Suggestion(category, loggedClient);
+		database.addSuggestion(suggestion);
+
+	}
+
 	public static void main(String[] args) {
 
 		System.out.println("The database is loading...");
@@ -140,16 +150,13 @@ public class Main {
 							INPUT = scan.nextInt();
 							switch (INPUT) {
 							case 1: // View profile
-								loggedClient.showMyInfo(); // mungon inplementimi
+								loggedClient.showMyInfo(loggedClient.getName());
 								break;
 							case 2:
 								printCategories();
 								break;
 							case 3:// suggest category
-								/**
-								 * futni emrin krijo kategori me ate emer krijo suggest me ate kategori shto te
-								 * lista suggestion
-								 */
+								suggestCategory(loggedClient);
 							}
 
 						}
