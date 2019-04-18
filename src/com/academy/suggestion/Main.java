@@ -9,7 +9,7 @@ public class Main {
 	private static Scanner scan = new Scanner(System.in);
 	private static Database database = new Database();
 	private static int INPUT = -1;
-	private static String emailRegEx = "^[_A-Za-z0-9-\\\\+]+(\\\\.[_A-Za-z0-9-]+)*@\"\r\n+\"[A-Za-z0-9-]+(\\\\.[A-Za-z0-9]+)*(\\\\.[A-Za-z]{2,})$";
+	private static String emailRegEx = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?";
 	private static String onlyLetterRegex = "[a-zA-Z]+";
 
 	private static void resetInput() {
