@@ -41,6 +41,10 @@ public class Database {
 		categories.add(category);
 	}
 
+	public void addSuggestion(Suggestion suggestion) {
+		suggestions.add(suggestion);
+	}
+	
 	private void loadClients() {
 		String[] usernames = { "John", "Mike", "Jill", "Anna", "David" };
 		String[] passwords = { "0000", "1111", "2222", "3333", "4444" };

@@ -26,9 +26,15 @@ public abstract class User {
 		this.gender = gender;
 		this.age = age;
 	}
-	
-	public void showMyInfo() {
-		//TODO 
+
+	public void showMyInfo(String name) {
+		System.out.println("*** " + name + " Profile ****");
+		System.out.println("Name : " + this.name);
+		System.out.println("Username : " + this.username);
+		System.out.println("Email : " + this.email);
+		System.out.println("Gender : " + this.gender);
+		System.out.println("Age : " + this.age);
+
 	}
 
 	public String getName() {
