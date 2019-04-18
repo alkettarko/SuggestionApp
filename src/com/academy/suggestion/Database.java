@@ -22,19 +22,35 @@ public class Database {
 		}
 	}
 
+	// TODO ADDSUGESTION
+
+	public boolean existCategory(String name) {
+		for(int i = 0 ; i<categories.size(); i++) {
+			if(categories.get(i).getName().equals(name)) {
+				return true;
+			}
+		}
+		return false;
+	}
 	
-	
-	
+	public void addClient(Client client) {
+		clients.add(client);
+	}
+
+	public void addCategory(Category category) {
+		categories.add(category);
+	}
+
 	private void loadClients() {
 		String[] usernames = { "John", "Mike", "Jill", "Anna", "David" };
 		String[] passwords = { "0000", "1111", "2222", "3333", "4444" };
 
 		clients = new ArrayList<Client>();
 		for (int i = 0; i < usernames.length; i++) {
-			for (int j = 0; j < passwords.length; j++) {
-				Client client = new Client(usernames[i], passwords[i]);
-				clients.add(client);
-			}
+
+			Client client = new Client(usernames[i], passwords[i]);
+			clients.add(client);
+
 		}
 	}
 
@@ -71,7 +87,7 @@ public class Database {
 			movies.addSubCategory(subCategory);
 		}
 	}
-	
+
 	public Client loginAsClient(String username, String password) {
 		for (int i = 0; i < clients.size(); i++) {
 			if (clients.get(i).getUsername().equals(username) && clients.get(i).getPassword().equals(password)) {
@@ -89,7 +105,7 @@ public class Database {
 		}
 		return null;
 	}
-	
+
 	public List<Client> getClients() {
 		return clients;
 	}

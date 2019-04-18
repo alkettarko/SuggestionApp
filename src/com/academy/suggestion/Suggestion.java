@@ -1,11 +1,11 @@
 package com.academy.suggestion;
 
 public class Suggestion {
-	
+
 	private Category category;
 	private Client client;
-	
-	public Suggestion(Category category, Client client, Object object, int i, int i2) {
+
+	public Suggestion(Category category, Client client) {
 		this.category = category;
 		this.client = client;
 	}
@@ -25,11 +25,5 @@ public class Suggestion {
 	public void setClient(Client client) {
 		this.client = client;
 	}
-
-	
-	
-	
-	
-	
 
 }

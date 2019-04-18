@@ -1,20 +1,24 @@
 package com.academy.suggestion;
 
+enum Gender {
+	F, M;
+}
+
 public abstract class User {
-	private int id;
+
 	private String name;
 	private String username;
 	private String password;
 	private String email;
-	private String gender;
+	private Gender gender;
 	private int age;
-	
+
 	public User(String username, String password) {
 		this.setUsername(username);
 		this.password = password;
 	}
-	
-	public User(String name, String username, String password, String email, String gender, int age) {
+
+	public User(String name, String username, String password, String email, Gender gender, int age) {
 
 		this(username, password);
 		this.name = name;
@@ -23,6 +27,10 @@ public abstract class User {
 		this.age = age;
 	}
 	
+	public void showMyInfo() {
+		//TODO 
+	}
+
 	public String getName() {
 		return name;
 	}
@@ -47,11 +55,11 @@ public abstract class User {
 		this.email = email;
 	}
 
-	public String getGender() {
+	public Gender getGender() {
 		return gender;
 	}
 
-	public void setGender(String gender) {
+	public void setGender(Gender gender) {
 		this.gender = gender;
 	}
 
@@ -61,14 +69,6 @@ public abstract class User {
 
 	public void setAge(int age) {
 		this.age = age;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public String getUsername() {
@@ -81,13 +81,8 @@ public abstract class User {
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", username=" + username + ", password=" + password + ", email="
-				+ email + ", gender=" + gender + ", age=" + age + "]";
+		return "User [name=" + name + ", username=" + username + ", password=" + password + ", email=" + email
+				+ ", gender=" + gender + ", age=" + age + "]";
 	}
-	
-	
-
-	
-	
 
 }

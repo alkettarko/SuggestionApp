@@ -19,11 +19,11 @@ public class Category {
 	}
 
 	public void printSubCategeory() {
-		if (subCategories.size() == 0) {
+		if (subCategories.isEmpty()) {
 			System.out.println("The current Category has not subCategories");
 		} else {
 			for (int i = 0; i < subCategories.size(); i++) {
-				System.out.println(i + "Name= " + subCategories.get(i).getName());
+				System.out.println("Id = " + i + " Name= " + subCategories.get(i).getName());
 			}
 		}
 	}

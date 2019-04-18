@@ -1,7 +1,7 @@
 package com.academy.suggestion;
 
 public class Message {
-	
+
 	public static void printWelcomeMenu() {
 		System.out.println("Welcome!");
 		System.out.println("1 - Login");
@@ -32,14 +32,17 @@ public class Message {
 		System.out.println("Enter your information below: First Username then the password: ");
 		System.out.println();
 	}
-	
-	public static void printClientHomePage() {
-		System.out.println("*** Client HomePage ***");
+
+	public static void printClientHomePage(String name) {
+
+		System.out.println("*** " + name + " HomePage ***");
+
 		System.out.println("1 - View Profile");
 		System.out.println("2 - View Categories");
 		System.out.println("0 - Log Out");
+
 	}
-	
+
 	public static void printAdminHomePage() {
 		System.out.println("*** Admin HomePage ***");
 		System.out.println("1 - Create Category");
@@ -47,9 +50,6 @@ public class Message {
 		System.out.println("3 - Add Materials");
 		System.out.println("4 - Manage Requests");
 	}
-	
-
-	
 	
 	
 

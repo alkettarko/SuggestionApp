@@ -11,7 +11,7 @@ public class Client extends User {
 		super(username, password);
 	}
 
-	public Client(String name, String username, String password, String email, String gender, int age) {
+	public Client(String name, String username, String password, String email, Gender gender, int age) {
 		super(name, username, password, email, gender, age);
 	}
 
@@ -20,9 +20,9 @@ public class Client extends User {
 
 	}
 
-	public void printCategory() {
-		if (subscribedCategories.size() == 0) {
-			System.out.println("You dont have any liked categories ");
+	public void printSubscribedCategory() {
+		if (subscribedCategories.isEmpty()) {
+			System.out.println("You dont have any Subscribed categories ");
 		} else {
 			for (int i = 0; i < subscribedCategories.size(); i++) {
 				System.out.println(i + "Name= " + subscribedCategories.get(i).getName());
@@ -30,7 +30,7 @@ public class Client extends User {
 		}
 	}
 
-	public boolean hasLikedCategories() {
+	public boolean hasSubscribedCategories() {
 		return subscribedCategories.size() > 0;
 	}
 
