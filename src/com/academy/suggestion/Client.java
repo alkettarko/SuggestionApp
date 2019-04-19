@@ -5,7 +5,8 @@ import java.util.List;
 
 public class Client extends User {
 
-	private List<Category> subscribedCategories = new ArrayList<Category>();
+	private List<Post> likedPosts = new ArrayList<Post>();
+	private List<String> messages = new ArrayList<String>();
 
 	public Client(String username, String password) {
 		super(username, password);
@@ -15,36 +16,46 @@ public class Client extends User {
 		super(name, username, password, email, gender, age);
 	}
 
-	public void subscribeCategory(Category category) {
-		subscribedCategories.add(category);
+	public void likePost(Post post) {
+		likedPosts.add(post);
 
 	}
 
-	public void printSubscribedCategory() {
-		if (subscribedCategories.isEmpty()) {
-			System.out.println("You dont have any Subscribed categories ");
+	public void printMessages() {
+		if (messages.isEmpty()) {
+			System.out.println("You dont have any messages ");
 		} else {
-			for (int i = 0; i < subscribedCategories.size(); i++) {
-				System.out.println(i + "Name= " + subscribedCategories.get(i).getName());
+			for (int i = 0; i < messages.size(); i++) {
+				System.out.println(messages);
 			}
 		}
 	}
 
-	public boolean hasSubscribedCategories() {
-		return subscribedCategories.size() > 0;
+	public void addMessage(String message) {
+		messages.add(message);
 	}
 
-	public List<Category> getSubscribedCategories() {
-		return subscribedCategories;
+	public void printLikedPost() {
+		if (likedPosts.isEmpty()) {
+			System.out.println("You dont have any liked posts ");
+		} else {
+			for (int i = 0; i < likedPosts.size(); i++) {
+				System.out.println("Id = " + i + " Title = " + likedPosts.get(i).getTitle());
+			}
+		}
 	}
 
-	public void setSubscribedCategories(List<Category> subscribedCategories) {
-		this.subscribedCategories = subscribedCategories;
+	public List<Post> getLikedPosts() {
+		return likedPosts;
+	}
+
+	public void setLikedPosts(List<Post> likedPosts) {
+		this.likedPosts = likedPosts;
 	}
 
 	@Override
 	public String toString() {
-		return "Client [subscribedCategories=" + subscribedCategories + "]";
+		return "Client [likedPosts=" + likedPosts + ", messages=" + messages + "]";
 	}
 
 }

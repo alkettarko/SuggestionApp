@@ -18,6 +18,16 @@ public class Category {
 		subCategories.add(category);
 	}
 
+	public void printPost() {
+		if (posts.isEmpty()) {
+			System.out.println("The current Category has no posts");
+		} else {
+			for (int i = 0; i < posts.size(); i++) {
+				System.out.println("Id = " + i + " Name= " + posts.get(i).getTitle());
+			}
+		}
+	}
+
 	public void printSubCategeory() {
 		if (subCategories.isEmpty()) {
 			System.out.println("The current Category has not subCategories");
@@ -26,10 +36,6 @@ public class Category {
 				System.out.println("Id = " + i + " Name= " + subCategories.get(i).getName());
 			}
 		}
-	}
-
-	public boolean isSubCategory() {
-		return subCategories.size() == 0;
 	}
 
 	public void addPost(Post post) {
@@ -42,6 +48,14 @@ public class Category {
 
 	public void setSubCategories(List<Category> subCategories) {
 		this.subCategories = subCategories;
+	}
+
+	public List<Post> getPosts() {
+		return posts;
+	}
+
+	public void setPosts(List<Post> posts) {
+		this.posts = posts;
 	}
 
 	public String getName() {

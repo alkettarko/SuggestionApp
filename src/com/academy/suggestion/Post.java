@@ -5,11 +5,17 @@ public class Post {
 	private String title;
 	private String description;
 
-	public Post(String title , String description) {
+	public Post(String title) {
+		this.title = title;
+
+	}
+
+	public Post(String title, String description) {
+
 		this.title = title;
 		this.description = description;
 	}
-	
+
 	public String getTitle() {
 		return title;
 	}
@@ -26,5 +32,3 @@ public class Post {
 		this.description = description;
 	}
 }
-
-

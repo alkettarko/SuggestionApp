@@ -3,6 +3,7 @@ package com.academy.suggestion;
 public class Message {
 
 	public static void printWelcomeMenu() {
+		System.out.println(" ");
 		System.out.println("Welcome!");
 		System.out.println("1 - Login");
 		System.out.println("2 - Register");
@@ -41,8 +42,11 @@ public class Message {
 		System.out.println(" ");
 		System.out.println("*** " + name + " HomePage ***");
 		System.out.println("1 - View Profile");
-		System.out.println("2 - View Categories");
-		System.out.println("3 - Suggest Categories");
+		System.out.println("2 - Edit Profile");
+		System.out.println("3 - View Categories");
+		System.out.println("4 - Suggest Categories");
+		System.out.println("5 - Like Post ");
+		System.out.println("6 - View Messages");
 		System.out.println("0 - Log Out");
 
 	}
@@ -52,10 +56,9 @@ public class Message {
 		System.out.println("*** Admin HomePage ***");
 		System.out.println("1 - Create Category");
 		System.out.println("2 - Create SubCategory");
-		System.out.println("3 - Add Materials");
-		System.out.println("4 - Manage Requests");
+		System.out.println("3 - Create Post");
+		System.out.println("4 - Manage Suggestion Requests");
+
 	}
-	
-	
 
 }

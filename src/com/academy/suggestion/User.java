@@ -14,7 +14,7 @@ public abstract class User {
 	private int age;
 
 	public User(String username, String password) {
-		this.setUsername(username);
+		this.username = username;
 		this.password = password;
 	}
 
@@ -27,8 +27,8 @@ public abstract class User {
 		this.age = age;
 	}
 
-	public void showMyInfo(String name) {
-		System.out.println("*** " + name + " Profile ****");
+	public void showMyInfo() {
+		System.out.println("*** Profile ***");
 		System.out.println("Name : " + this.name);
 		System.out.println("Username : " + this.username);
 		System.out.println("Email : " + this.email);
